@@ -1,0 +1,30 @@
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    border-style: solid;
+    text-align: right;
+    flex: 5;
+    flex-wrap: wrap;
+  }
+
+  .topnav a {
+    display: inline-block;
+    color: black;
+    padding: 25px 35px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: white;
+  }
+
+  .logo {
+    flex: 1;
+    border-style: solid;
+  }
+
+  .nav-layout {
+      display: flex;
+  }
