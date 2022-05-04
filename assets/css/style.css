@@ -5,7 +5,15 @@ main {
 }
 
 .container {
-    padding-top: 32px;
+    padding-top: 20px;
+}
+
+.findEnt {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
 }
 
 .whatsHot {
@@ -13,4 +21,31 @@ main {
     font-size: xx-large;
     text-align: center;
     padding-bottom: 32px;
+    font-weight: bold;
+}
+
+.card {
+    box-shadow: 0, 0, 5px, 5px, white;
+}
+/* trying to center button */
+.control {
+    padding-bottom: 15px;
+    
+     /* width: fit-content;    */
+}
+
+/* trying to center button */
+.field {
+   justify-items: center;
+   /* width: fit-content; */
+}
+
+/* trying to center button */
+.submitBtn {
+    justify-content: center;
+}
+
+input {
+    text-align: center;
+    
 }
