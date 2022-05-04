@@ -24,25 +24,20 @@ main {
     font-weight: bold;
 }
 
-.card {
-    box-shadow: 0, 0, 5px, 5px, white;
-}
-/* trying to center button */
-.control {
-    padding-bottom: 15px;
+.searchBtn {
+    padding-top: 10px;
     
-     /* width: fit-content;    */
 }
 
-/* trying to center button */
-.field {
-   justify-items: center;
-   /* width: fit-content; */
+.button {
+    background-color: rgb(14, 177, 14);
+    color: black;
+    border-color: black;
 }
 
-/* trying to center button */
-.submitBtn {
-    justify-content: center;
+.button:hover {
+    border-color: white;
+    color: black;
 }
 
 input {
