@@ -1,0 +1,16 @@
+
+
+main {
+    background-color: black;
+}
+
+.container {
+    padding-top: 32px;
+}
+
+.whatsHot {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    padding-bottom: 32px;
+}
