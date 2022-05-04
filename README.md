@@ -1,1 +1,2 @@
-# entertain-me
+# EntertainMe
+

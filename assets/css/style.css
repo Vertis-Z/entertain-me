@@ -1,3 +1,62 @@
+main {
+    background-color: black;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+.findEnt {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.whatsHot {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    padding-bottom: 32px;
+    font-weight: bold;
+}
+
+
+
+.search {
+    background-color: rgb(14, 177, 14);
+    color: black;
+    border-color: black;
+}
+
+.button:hover {
+    border-color: white;
+    color: black;
+}
+
+input {
+    text-align: center;   
+}
+
+.searchbar {
+    justify-content: center;
+  
+}
+.searchBtn {
+    
+    color: black;
+    background-color: rgb(14, 177, 14);
+    /* justify-content: center;
+    align-items: center; */
+    margin: 0 auto;
+}
+
+.buttonDiv {
+    padding-top: 10px;
+}
+
 .topnav {
     overflow: hidden;
     background-color: white;
