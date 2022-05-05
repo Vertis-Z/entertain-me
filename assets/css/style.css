@@ -1,7 +1,8 @@
 main {
-    background-color: black;
+    background-color: rgb(29, 29, 29);
 }
 
+/* CARD STYLING */
 .container {
     padding-top: 20px;
 }
@@ -23,8 +24,6 @@ main {
     font-weight: bold;
 }
 
-
-
 .search {
     background-color: rgb(14, 177, 14);
     color: black;
@@ -45,11 +44,9 @@ input {
   
 }
 .searchBtn {
-    
+    border-color: rgb(29, 29, 29);
     color: black;
     background-color: rgb(14, 177, 14);
-    /* justify-content: center;
-    align-items: center; */
     margin: 0 auto;
 }
 
@@ -57,6 +54,13 @@ input {
     padding-top: 10px;
 }
 
+.card-footer {
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* NAVIGATION */
 .topnav {
     overflow: hidden;
     background-color: white;
