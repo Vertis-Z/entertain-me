@@ -58,6 +58,10 @@ input {
     justify-content: center;
     align-items: center;
 }
+.watchBtn {
+    width: -webkit-fill-available;  
+    
+}
 
 
 /* NAVIGATION */
