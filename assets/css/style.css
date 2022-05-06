@@ -58,9 +58,12 @@ input {
     justify-content: center;
     align-items: center;
 }
-.watchBtn {
-    width: -webkit-fill-available;  
-    
+.watchNow {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-size: large;
+    border-radius: 10px;
 }
 
 
