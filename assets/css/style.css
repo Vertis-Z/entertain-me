@@ -1,6 +1,7 @@
-/* * {
-  display: block;
-} */
+
+main {
+    background-color: rgb(29, 29, 29);
+}
 
 html {
   scroll-behavior: smooth;
@@ -8,8 +9,10 @@ html {
 
 body {
   background-color: rgb(29, 29, 29);
+
 }
 
+/* CARD STYLING */
 .container {
   padding-top: 20px;
 }
@@ -49,6 +52,7 @@ input {
 .searchbar {
   justify-content: center;  
 }
+
 .searchBtn {  
   color: black;
   background-color: rgb(14, 177, 14);
@@ -57,12 +61,27 @@ input {
   margin: 0 auto;
   border: none;
   outline: none;
+
 }
 
 .buttonDiv {
   padding-top: 10px;
 }
 
+.card-footer {
+    justify-content: center;
+    align-items: center;
+}
+.watchNow {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-size: large;
+    border-radius: 5px;
+}
+/* END CARD STYLING */
+
+/* NAVIGATION */
 .topnav {
   overflow: hidden;
   background-color: white;
