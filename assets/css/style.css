@@ -41,8 +41,7 @@ body {
 }
 
 .button:hover {
-  border-color: white;
-  color: black;
+  color: white;
 }
 
 input {
@@ -61,7 +60,6 @@ input {
   margin: 0 auto;
   border: none;
   outline: none;
-
 }
 
 .buttonDiv {
@@ -84,8 +82,8 @@ input {
 /* NAVIGATION */
 .topnav {
   overflow: hidden;
-  background-color: white;
-  border-style: solid;
+  background-color: rgb(29, 29, 29);
+  /* border-style: solid; */
   text-align: right;
   flex: 5;
   flex-wrap: wrap;
@@ -93,15 +91,16 @@ input {
 
 .topnav a {
    display: inline-block;
-  color: black;
+  color: white;
   padding: 25px 35px;
   text-decoration: none;
   font-size: 17px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: white;
+  /* background-color: #ddd; */
+  /* color: white; */
+  text-shadow: 0 0 20px white;
 }
 
 .logo {
