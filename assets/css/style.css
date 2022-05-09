@@ -88,3 +88,7 @@ input {
 .nav-layout {
     display: flex;
 }
+
+.footer {
+    background-color: rgb(29, 29, 29);
+}
