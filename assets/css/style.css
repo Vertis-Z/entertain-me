@@ -117,6 +117,10 @@ input {
     display: flex;
 }
 
+
+.footer {
+    background-color: rgb(29, 29, 29);
+
 /* styling for return to top button */
 #topBtn {
   display: none;
