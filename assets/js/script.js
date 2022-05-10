@@ -1,5 +1,6 @@
 // ott details api key
-var apikey = "7eb3dee3c7mshca977b3e70ebd78p1899f9jsnf27498159e6b";
+var apikey1 = "7eb3dee3c7mshca977b3e70ebd78p1899f9jsnf27498159e6b";
+var apikey2 = "ec338911d7mshf8557b4cdd01735p1f25fejsn2a239a957b84"
 var searchForm2 = document.querySelector("#search-form2");
 var searchInput = document.querySelector("#input-search");
 
@@ -8,7 +9,7 @@ var top250Movies = function(){
         method: 'GET',
         headers: {
             'X-RapidAPI-Host': 'imdb-scraper.p.rapidapi.com',
-            'X-RapidAPI-Key': apikey,
+            'X-RapidAPI-Key': apikey2,
         }
     };
     
@@ -23,7 +24,7 @@ var top250Shows = function(){
     method: 'GET',
     headers: {
       'X-RapidAPI-Host': 'imdb-scraper.p.rapidapi.com',
-      'X-RapidAPI-Key': apikey
+      'X-RapidAPI-Key': apikey2
     }
   };
   
@@ -38,7 +39,7 @@ var mediaSearch = function(mediaquery){
     method: 'GET',
     headers: {
       'X-RapidAPI-Host': 'ott-details.p.rapidapi.com',
-      'X-RapidAPI-Key': apikey
+      'X-RapidAPI-Key': apikey2
     }
   };
   
