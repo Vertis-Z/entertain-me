@@ -21,7 +21,7 @@ body {
   color: white;
   font-size: xxx-large;
   text-align: center;
-  padding-bottom: 20px;
+  padding: 20px 0 20px 0;
   /* font-weight: bold; */
   font-family: fjalla-one, sans-serif;
   letter-spacing: 1px;
@@ -123,6 +123,8 @@ footer a {
   text-align: right;
   flex: 5;
   flex-wrap: wrap;
+  align-self: center;
+  
 }
 
 .topnav a {
@@ -133,6 +135,7 @@ footer a {
   font-size: x-large;
   margin: 10px 0;
   font-family: fjalla-one, sans-serif;
+ 
 }
 
 .topnav a:hover {
@@ -152,6 +155,7 @@ footer a {
 
 .nav-layout {
     display: flex;
+    border-bottom: 3px solid ;
 }
 
 
