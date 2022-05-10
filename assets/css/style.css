@@ -111,7 +111,15 @@ footer a {
     font-size: xxx-large;
     font-weight: bold;
 }
-
+.myFav {
+  color: white;
+  font-size: xxx-large;
+  text-align: center;
+  padding: 20px 0 50px 0;
+  /* font-weight: bold; */
+  font-family: fjalla-one, sans-serif;
+  letter-spacing: 1px;
+}
 
 /* END CARD STYLING */
 
