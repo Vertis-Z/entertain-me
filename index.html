@@ -6,61 +6,108 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- We need to select a font from google fonts -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=fjalla+one">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=source+sans+pro">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>entertainMe</title>
 </head>
 
-<body class="body">
-  <header>
+<body>
     <!-- title bar goes here -->
-
+    <!-- Main body of the page -->
+   
     <div class="nav-layout">
       <div class="logo">
         <img src="./assets/images/entertain me logo2.png" width="" height="" alt="">
+        
       </div>
 
       <div class="topnav">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="html/about.html">About</a>
         <a href="./favorites.html">My Favorites</a>
+        
       </div>
     </div>
   </header>
   <!-- Main body of the page -->
-  <main class="main">
+  <main>
 
     <!--SEARCH CONTAINER-->
     <div class="container is-fluid">
 
       <h1 class="findEnt">Find Your Entertainment</h1>
       <!-- SEARCH BAR -->
-      <form class="control searchbar is-flex buttonDiv search-form" id="search-form">
-        <input id="input-search" class="input is-focused" type="text" autofocus="true" placeholder="Search for entertainment">
-        <button class="button searchBtn" type="submit">Search</button>
-      </form>
-      <!-- <div class="control is-flex buttonDiv">
-        <button class="button searchBtn" type="submit">Search</button>
-      </div> -->
+      <div class="control searchbar">
+        <input class="input is-focused" type="text" placeholder="Search for entertainment">
+      </div>
+      <div class="control is-flex buttonDiv">
+        <button class="button searchBtn">Search</button>
+      </div>
 
     </div>
 
     <!--BEGINNING OF CARD CONTAINER-->
-    <h1 class="whatsHot">What's Entertaining Others</h1>
-  
-
-    <div class="container is-fluid columnsContainer">
+    <div class="container is-fluid">
+      <h1 class="whatsHot">What's Entertaining Others</h1>
 
       <!--THREE "COLUMNS"-->
- 
-      <!-- <div class="columns is-multiline card-section" id="card-section">
 
-      </div> -->
-      <!--End "columns multiline"-->
+      <div class="columns card-section">
 
+<!-- ONE BOX -->
+        <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p class="movieDiv">
+                    <strong class="movie-title">John Smith</strong> 
+                  </p>
+                    <br>
+                    <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+         
+<!-- ONE BOX -->
+<div class="box">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p class="movieDiv">
+            <strong class="movie-title">John Smith</strong> 
+          </p>  
+            <br>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+          </p>
+        </div>        
+      </div>
+    </article>
+  </div>
+
+
+  <!--End "columns multiline"-->
+      </div>
+
+      <!--End Container-->
     </div>
-    <!--End Container-->
+
 
     <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
   </main>
@@ -73,3 +120,5 @@
 <!-- moment.js script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script src="./assets/js/script.js"></script>
+
+</html>

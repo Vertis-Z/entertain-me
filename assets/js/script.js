@@ -127,36 +127,44 @@ var createTop250 = function (data) {
     let mediaName = media250[i].Title;
     let mediaID = media250[i].movieId;
     let mediaRating = media250[i].Rating;
-    // let mediaImage = data.results[i].imageurl;
+    let mediaImage = data.results[i].imageurl;
     // let mediaType = data.results[i].type;
-    // let mediaSynopsis = data.results[i].synopsis
+    let mediaSynopsis = data.results[i].synopsis
     // let whereWatch = data.results[i].value
 
     // create card for eatch [i]
-    let outer_container = $("<div>").addClass("column is-4");
-    let cardsize6 = $("<div>").addClass("card");
-    let cardImage = $("<div>").addClass("card-image");
-    let imageis2by3 = $("<figure>").addClass("image is-2by3");
+
+
+    // let cardsize6 = $("<div>").addClass("card size-6");
+    // let cardImage = $("<div>").addClass("card-image");
+    // let textcenter = $("<div>").addClass("card-content has-text-centered");
+    // let mediaDiv = $("<div>").addClass("media");
+    // let cardFooter = $("<footer>").addClass("card-footer");
+    // let rating = $("<p>").addClass("card-footer-item").text(mediaRating);
+    // let addFavorite = $("<a>").attr("href", "#").addClass("card-footer-item");
+    // let watchNow = $("div").addClass("watchNow").attr("type","text");
+
+// create BOX for each
+    let outer_container = $("<div>").addClass("box");
+    let article = $("<article>").addClass("media");
+    let mediaLeft = $("<div>").addClass("media-left");
+    let imageis64x64 = $("<figure>").addClass("image is-64x64");
     let mediaArt = $("<img>").attr("src", mediaImage);
-    let textcenter = $("<div>").addClass("card-content has-text-centered");
-    let mediaDiv = $("<div>").addClass("media");
     let mediaContent = $("<div>").addClass("media-content");
-    let mediaTitle = $("<p>").addClass("title is-4").text(mediaName);
-    let synopisText = $("<div>").addClass("content").text(mediaSynopsis);
-    let cardFooter = $("<footer>").addClass("card-footer");
-    let rating = $("<p>").addClass("card-footer-item").text(mediaRating);
-    let addFavorite = $("<a>").attr("href", "#").addClass("card-footer-item");
-    let watchNow = $("div").addClass("watchNow").attr("type","text");
+    let content = $("<div>").addClass("content");
+    let mediaDiv = $("<div>").addClass("movieDiv");
+    let mediaTitle = $("<strong>").addClass("movie-title").text(mediaName);
+    let synopisText = $("<p>").addClass("description").text(mediaSynopsis);
     // append cards
-    $(".card-section").append(outer_container);
-    outer_container.append(cardsize6);
-    cardsize6.append(cardImage, textcenter);
-    cardImage.append(imageis2by3);
-    imageis2by3.append(mediaArt);
-    textcenter.append(mediaDiv, synopisText, cardFooter, watchNow);
-    mediaDiv.append(mediaContent);
-    mediaContent.append(mediaTitle);
-    cardFooter.append(rating,addFavorite);
+    $(".columns card-section").append(outer_container);
+    outer_container.append(article);
+    article.append(mediaLeft, mediaContent);
+    mediaLeft.append(imageis64x64);
+    imageis64x64.append(mediaArt);
+    mediaContent.append(content);
+    content.append(mediaDiv, synopisText);
+    mediaDiv.append(mediaTitle);
+    
   };
 }
 
