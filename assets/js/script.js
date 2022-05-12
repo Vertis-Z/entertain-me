@@ -122,21 +122,19 @@ function topFunction() {
 var createTop250 = function (data) {
   let media250 = data.movies[0];
 
-  for (let i = 0; i < media250.length(Math.max(10)); i++) {
+  for (let i = 0; i < media250.length; i++) {
     // get variables
     let mediaName = media250[i].Title;
     let mediaID = media250[i].movieId;
     let mediaRating = media250[i].Rating;
-    let mediaImage = data.results[i].imageurl;
-    let mediaType = data.results[i].type;
-    let mediaSynopsis = data.results[i].synopsis
-    let whereWatch = data.results[i].value
+    // let mediaImage = data.results[i].imageurl;
+    // let mediaType = data.results[i].type;
+    // let mediaSynopsis = data.results[i].synopsis
+    // let whereWatch = data.results[i].value
 
     // create card for eatch [i]
-    //let container_section = $("<div>").addClass("container is-fluid cardContainer");
-    let card_section = $("<div>").addClass("columns is-multiline card-section");
     let outer_container = $("<div>").addClass("column is-4");
-    let cardsize6 = $("<div>").addClass("card size-6");
+    let cardsize6 = $("<div>").addClass("card");
     let cardImage = $("<div>").addClass("card-image");
     let imageis2by3 = $("<figure>").addClass("image is-2by3");
     let mediaArt = $("<img>").attr("src", mediaImage);
@@ -150,9 +148,7 @@ var createTop250 = function (data) {
     let addFavorite = $("<a>").attr("href", "#").addClass("card-footer-item");
     let watchNow = $("div").addClass("watchNow").attr("type","text");
     // append cards
-    $(".columnsContainer").append(card_section);
-    //container_section.append(card_section);
-    card_section.append(outer_container);
+    $(".card-section").append(outer_container);
     outer_container.append(cardsize6);
     cardsize6.append(cardImage, textcenter);
     cardImage.append(imageis2by3);
@@ -161,8 +157,8 @@ var createTop250 = function (data) {
     mediaDiv.append(mediaContent);
     mediaContent.append(mediaTitle);
     cardFooter.append(rating,addFavorite);
-  }
-};
+  };
+}
 
 // Search Section
 var formSubmitHandler = function (event) {
@@ -176,8 +172,7 @@ var formSubmitHandler = function (event) {
 window.addEventListener('DOMContentLoaded', function() {
   searchForm.addEventListener("submit", formSubmitHandler);
 });
-ottMediaSearch();
+
 top250Movies();
-createTop250();
 // top250Shows();
 // mediaSearch();
