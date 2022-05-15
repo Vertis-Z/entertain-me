@@ -19,11 +19,12 @@ body {
 
 .findEnt {
   color: white;
-  font-size: xx-large;
+  font-size: xxx-large;
   text-align: center;
-  padding-bottom: 20px;
-  font-weight: bold;
-
+  padding: 20px 0 20px 0;
+  /* font-weight: bold; */
+  font-family: fjalla-one, sans-serif;
+  letter-spacing: 1px;
 }
 
 .whatsHot {
@@ -32,6 +33,7 @@ body {
   text-align: center;
   padding-bottom: 32px;
   font-weight: bold;
+  font-family: fjalla-one, sans-serif;
 }
 
 .search {
@@ -41,8 +43,7 @@ body {
 }
 
 .button:hover {
-  border-color: white;
-  color: black;
+  color: white;
 }
 
 input {
@@ -61,7 +62,6 @@ input {
   margin: 0 auto;
   border: none;
   outline: none;
-
 }
 
 .buttonDiv {
@@ -78,30 +78,78 @@ input {
     padding: 5px;
     font-size: large;
     border-radius: 5px;
+    font-family: source-sans-pro, sans-serif;
 }
+
+.content {
+    font-family: source-sans-pro, sans-serif;
+}
+.title {
+    font-family: fjalla-one, sans-serif;
+}
+footer a {
+    font-family: source-sans-pro, sans-serif;
+}
+.subtitle {
+    font-family: source-sans-pro, sans-serif;
+    text-align: center;
+}
+.darktitle {
+    font-family: fjalla-one, sans-serif;
+    font-size: xx-large;
+    padding-top: 0;
+}
+
+.abtText {
+    font-family: source-sans-pro, sans-serif;
+    font-size: x-large;
+    text-align: center;
+}
+
+.abtUs {
+    font-family: fjalla-one, sans-serif;
+    font-size: xxx-large;
+    font-weight: bold;
+}
+.myFav {
+  color: white;
+  font-size: xxx-large;
+  text-align: center;
+  padding: 20px 0 50px 0;
+  /* font-weight: bold; */
+  font-family: fjalla-one, sans-serif;
+  letter-spacing: 1px;
+}
+
 /* END CARD STYLING */
 
 /* NAVIGATION */
 .topnav {
   overflow: hidden;
-  background-color: white;
-  border-style: solid;
+  background-color: rgb(29, 29, 29);
+  /* border-style: solid; */
   text-align: right;
   flex: 5;
   flex-wrap: wrap;
+  align-self: center;
+  
 }
 
 .topnav a {
    display: inline-block;
-  color: black;
-  padding: 25px 35px;
+  color: rgb(223, 220, 220);
+  padding: 25px 50px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: x-large;
+  margin: 10px 0;
+  font-family: fjalla-one, sans-serif;
+ 
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  /* background-color: #ddd; */
   color: white;
+  text-shadow: 0 0 20px white;
 }
 
 .logo {
@@ -115,11 +163,13 @@ input {
 
 .nav-layout {
     display: flex;
+    border-bottom: 3px solid ;
 }
 
 
 .footer {
     background-color: rgb(29, 29, 29);
+}
 
 /* styling for return to top button */
 #topBtn {
