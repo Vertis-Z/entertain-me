@@ -1,6 +1,6 @@
 # EntertainMe
 
-## A search and save site for movie lovers.
+### A search and save site for movie lovers.
 
 ## Built with
 * HTML
