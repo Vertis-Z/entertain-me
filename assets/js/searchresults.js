@@ -2,6 +2,7 @@ var apikey1 = "7eb3dee3c7mshca977b3e70ebd78p1899f9jsnf27498159e6b";
 var apikey2 = "ec338911d7mshf8557b4cdd01735p1f25fejsn2a239a957b84";
 var searchForm2 = document.querySelector("#search-form2");
 var searchInput2 = document.querySelector("#input-search2");
+var imdbkey = "k_sjx4r3rh"
 
 
 // var ottMediaSearch = function (searchValue) {
@@ -27,105 +28,40 @@ var searchInput2 = document.querySelector("#input-search2");
 //         });
 // };
 
-// <----------------- first fetch code ------------------->
-// var imdbRating = function (searchValue) {
-//     fetch('https://imdb-api.com/en/API/SearchTitle/k_1emmw9sw/' + searchValue, {
-//         "method": "GET"
-//     })
-//         .then(response => {
-//             if (response.ok) {
-//                 return response.json().then (function(data){
-//                     console.log(data)
-//                     createResults(data);
-//                 });
-//             } else { text("Movie Not Found") }
-//         }).then(data => {
-//             fetch('https://imdb-api.com/en/API/Ratings/k_1emmw9sw/' + data.results.id, {
-//                 "method": "GET"
-//             })
-//                 .then(response => {
-//                     if (response.ok) {
-//                         response.json().then(function (data) {
-//                             console.log(data)
-//                             createResults(data);
-//                         })
-//                     } else {
-//                         $(".modal-append").empty();
-//                         $(".modal-append").append("Error: " + response.statusText)
-//                     }
-//                 })
-//                 .catch(err => {
-//                     console.log(err);
-//                 })
-//         })
-// }
-
-// <-------------------second fetch code----------------->
-// var imdbRating = function (searchValue) {
-//     const url = 'https://imdb-api.com/en/API';
-
-//     const result = fetch(`${url}/SearchTitle/k_1emmw9sw/` + searchValue, { method: 'get' })
-//         .then(response => response.json()) // pass the data as promise to next then block
-//         .then(data => {
-//             const mediaId = data.results.id;
-//             console.log(data)
-//             createResults(data)
-//             console.log(mediaId);
-
-//             return fetch(`${url}/Ratings/k_1emmw9sw/${mediaId}`); // make a 2nd request and return a promise
-//         })
-//         .then(response => response.json())
-//         .catch(err => {
-//             console.error('Request failed', err)
-//         })
-
-//     // I'm using the result const to show that you can continue to extend the chain from the returned promise
-//     result.then(r => {
-//         console.log(r.first_stage); // 2nd request result first_stage property
-//     });
-// }
-
-// <----------------- Third Fetch code -------------------->
-// var imdbRating = function (searchValue) {
-//     fetch('https://imdb-api.com/en/API/SearchTitle/k_1emmw9sw/' + searchValue,)
-//         .then(function (response) {
-//             return response.json()
-//         })
-//         .then(function (data) {
-//             console.log(data);
-//             createResults(data)
-//             // do stuff with `data`, call second `fetch`
-//             return fetch('https://imdb-api.com/en/API/Ratings/k_1emmw9sw/' + results.id)
-//         })
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             console.log(data);
-//             // createResults(data.results.id)
-//             // do stuff with `data`
-//         })
-//         .catch(function (error) {
-//             console.log('Requestfailed', error)
-//         });
-// }
-
-// <-------------- Fourth Fetch code --------------------->
+// <----------------- fetch code ------------------->
 var imdbRating = function (searchValue) {
-    fetch('https://imdb-api.com/en/API/SearchTitle/k_1emmw9sw/' + searchValue).then(response => {
-        return response.json();
-    }).then(data => {
-        // createResults(data)
-        console.log(data)
-        return fetch('https://imdb-api.com/en/API/Title/k_1emmw9sw/' + data.results.id)
-    }).then(data =>{
-        createResults(data)
-        console.log(data)
-    }).catch(err =>{
-        console.log("We found an error -> " + err)
+    fetch('https://imdb-api.com/en/API/SearchTitle/' + imdbkey + '/' + searchValue, {
+        "method": "GET"
+    }).then(response => {
+        if (response.ok) {
+            return response.json()
+                .then(function (data) {
+                    console.log(data)
+                    createResults(data);
+                });
+        } else { text("Movie Not Found") }
+    }).then (data => {
+        fetch('https://imdb-api.com/en/API/Title/' + imdbkey + '/' + data.results.id, {
+            "method": "GET"
+        }).then(response => {
+            if (response.ok) {
+                response.json()
+                    .then(function (data) {
+                        console.log(data)
+                        createResults(data);
+                    })
+            } else {
+                $(".modal-append").empty();
+                $(".modal-append").append("Error: " + response.statusText)
+            }
+        })
+            .catch(err => {
+                console.log(err);
+            })
     })
 }
 
+// <-------------------- creates/appends cards using data from fetch ------------------>
 var createResults = function (data) {
     // empty previous data
     $("#card-section").empty();
@@ -147,7 +83,6 @@ var createResults = function (data) {
         let imageis2by3 = $("<figure>").addClass("image is-2by3");
         // catch if no image is found
         let mediaArt;
-        // if (data.results[i].imageurl[0] = null) {
         if (data.results[i].image = null) {
             mediaArt = $("<img>").attr("src", "../images/image-not-available.png");
         } else {
@@ -165,8 +100,14 @@ var createResults = function (data) {
             synopsisText = $("<div>").addClass("content").text(movieSynopsis);
         };
         let cardFooter = $("<footer>").addClass("card-footer");
-        let rating = $("<p>").addClass("card-footer-item").text(mediaRating);
-        // let addFavorite = $("<a>").attr("href", "#").addClass("card-footer-item");
+        let rating = $("<p>").addClass("card-footer-item").text("Rating Placeholder.");
+        // let rating
+        // if (data.results[i].imDbRating = null) {
+        //     rating = $("<p>").addClass("card-footer-item").text("Rating Not Found.");
+        // } else {
+        //     rating = $("<a>").attr("href", "#").addClass("card-footer-item").text(mediaRating);
+        // };
+        let addFavorite = $("<a>").attr("href", "#").addClass("card-footer-item").text("Add to Favorites");
 
         // append cards
         $(".card-section").append(outer_container);
@@ -177,7 +118,7 @@ var createResults = function (data) {
         textcenter.append(mediaDiv, synopsisText, cardFooter);
         mediaDiv.append(mediaContent);
         mediaContent.append(mediaTitle);
-        cardFooter.append(rating);
+        cardFooter.append(rating, addFavorite);
     };
 }
 
@@ -226,8 +167,8 @@ var filmStorage = JSON.parse(window.localStorage.getItem("searchFilm")) || [];
 // need to replace 'spaces' with %20 for fetch request to work
 var filmStorageReplaceSpace = filmStorage.split(" ").join("%20");
 // ottMediaSearch(filmStorageReplaceSpace);
-// imdbMediaSearch(filmStorageReplaceSpace)
-imdbRating(filmStorageReplaceSpace)
+// imdbMediaSearch(filmStorageReplaceSpace);
+imdbRating(filmStorageReplaceSpace);
 
 /* ---------------------- Scroll to top button ---------------------- */
 
