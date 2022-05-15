@@ -1,6 +1,6 @@
 # EntertainMe
 
-    A one-stop shop for movie lovers. Search for movies, and get results of other relevant films that might interest you. Save them to your favorites to revisit later.
+    A one-stop shop for movie lovers. 
 
 ## Built with
 * HTML
