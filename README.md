@@ -17,7 +17,7 @@ Deploy link: https://vertis-z.github.io/entertain-me/
 
 ### Info
 * Displays recommendations upon page loading
-* Pulls rating from IMDB and displays on bottom of movie card
+* Pulls movie info, image and rating from IMDB and displays movie card
 * Search function displays other relevant movies
 
 ### Issues
