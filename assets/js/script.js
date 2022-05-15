@@ -79,7 +79,7 @@ var searchInput = document.querySelector("#input-search");
 //     });
 // };
 
-// <--------------- Ott Details API ---------------->
+// <--------------- Ott Details API Broken for the moment ---------------->
 
 // var ottMediaSearch = function () {
 //   fetch('https://ott-details.p.rapidapi.com/search?title=' + titleQuery + '&page=1', {
