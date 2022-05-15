@@ -28,3 +28,4 @@ Deploy link: https://vertis-z.github.io/entertain-me/
 
 ## Screenshot
 
+![Screenshot (746)](https://user-images.githubusercontent.com/101135574/168494954-81aa5e4f-80dc-4601-9da1-18a86055ada5.png)
