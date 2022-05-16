@@ -18,8 +18,8 @@ Deploy link: https://vertis-z.github.io/entertain-me/
 ### Info
 * Displays recommendations upon page loading
 * Pulls movie info, image and rating from IMDB and displays movie card
-* Search function displays other relevant movies
-* Dropdown bar shows most recent search, stored on local storage
+* Search function stores the searched value to localstorage then loads a new html to display the results through a fetch request using the stored value to display relevant movies
+* 
 
 ### Issues
 * 1 day prior to due date, discovered OTT-Details API, and original IMDB scraper were down. 
