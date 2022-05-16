@@ -135,6 +135,25 @@ window.addEventListener('DOMContentLoaded', function () {
   searchForm.addEventListener("submit", formSubmitHandler);
 });
 
+// search bar local storage
+var tasks = [];
+document.getElementById('searchButton').addEventListener("click", function (event) {
+  event.preventDefault();
+  saveTasks(document.getElementById('input-search').value, 0)
+});
+var getText = JSON.parse(localStorage.getItem("input-search"));
+var loadTasks = function () {
+  tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  document.getElementById('movie-1').innerText = tasks
+};
+var saveTasks = function (task, index) {
+  tasks[index] = task;
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+};
+loadTasks();
+var textArea = document.getElementById('input-search');
+var searchButton = document.getElementById('searchButton');
+
 // <--------------- Scroll to top button ------------------>
 
 //Get the button:
