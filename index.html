@@ -44,11 +44,19 @@
           <label for="input-search"></label>
           <input id="input-search" class="input is-focused" type="text" autofocus="true"
             placeholder="Search for entertainment">
-          <button class="button searchBtn" type="submit">Search</button>
+          <button id="searchButton" class="button searchBtn" type="submit">Search</button>
         </form>
-
-      </div>
-
+        
+        <!--DROPDOWN-->
+        <div class="select is-active">
+          <select>
+            <option>Last Search</option>
+            <option id="movie-1"></option>
+          
+          </select>
+        </div>
+      </div> <!--CONTAINER DIV-->
+        
       <!--BEGINNING OF CARD CONTAINER-->
       <div class="container is-fluid">
         <h1 class="whatsHot">What's Entertaining The Editors</h1>

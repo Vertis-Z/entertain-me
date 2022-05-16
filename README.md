@@ -22,7 +22,7 @@ Deploy link: https://vertis-z.github.io/entertain-me/
 
 ### Issues
 * 1 day prior to due date, discovered OTT-Details API, and original IMDB scraper were down. 
-* Worked to set up a new IMDB API, to retrieve data and rating at the minimum. 
+* Worked to set up a new IMDB API, to retrieve movie data and rating. 
 * We kept all the code for OTT-Details and original IMDB scraper in the script.js file, but commented out. At the time of due date, those API's were still down. 
 * Favorites page/Local Storage is WIP. Upon failure of the API's, priority was to set up at least one new API so search function and movie cards were operational. 
 

@@ -115,25 +115,25 @@ var searchInput = document.querySelector("#input-search");
 
 // Search Section
 
-var formSubmitHandler = function (event) {
-  event.preventDefault();
+// var formSubmitHandler = function (event) {
+//   event.preventDefault();
 
-  // get value from input element
-  var searchMovie = searchInput.value.trim();
+//   // get value from input element
+//   var searchMovie = searchInput.value.trim();
 
-  // clear search input and old data
-  $("#input-search").val("");
-  window.localStorage.removeItem("searchFilm")
+//   // clear search input and old data
+//   $("#input-search").val("");
+//   window.localStorage.removeItem("searchFilm")
 
-  // set localStorage for searchresults html page
-  window.localStorage.setItem("searchFilm", JSON.stringify(searchMovie));
-  window.location.assign('./assets/html/searchresults.html')
-}
+//   // set localStorage for searchresults html page
+//   window.localStorage.setItem("searchFilm", JSON.stringify(searchMovie));
+//   window.location.assign('./assets/html/searchresults.html')
+// }
 
-// Event Listener Section
-window.addEventListener('DOMContentLoaded', function () {
-  searchForm.addEventListener("submit", formSubmitHandler);
-});
+// // Event Listener Section
+// window.addEventListener('DOMContentLoaded', function () {
+//   searchForm.addEventListener("submit", formSubmitHandler);
+// });
 
 // <--------------- Scroll to top button ------------------>
 
@@ -156,3 +156,84 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+//search text to local storage
+
+// document.getElementById('searchButton').addEventListener("click", function(event) {
+  //   event.preventDefault();
+  // saveTasks(document.getElementById('input-search').value, 1)
+  // });
+  // document.getElementById('searchButton').addEventListener("click", function(event) {
+    //   event.preventDefault();
+    // saveTasks(document.getElementById('input-search').value, 2)
+    // });
+    // document.getElementById('searchButton').addEventListener("click", function(event) {
+      //   event.preventDefault();
+      // saveTasks(document.getElementById('input-search').value, 3)
+      // });
+      // document.getElementById('searchButton').addEventListener("click", function(event) {
+        //   event.preventDefault();
+        // saveTasks(document.getElementById('input-search').value, 4)
+        // });
+
+
+  var tasks = [];
+        
+      document.getElementById('searchButton').addEventListener("click", function(event) {
+        event.preventDefault();
+        saveTasks(document.getElementById('input-search').value, 0)         
+        });
+        
+  var getText = JSON.parse(localStorage.getItem("input-search"));
+
+  var loadTasks = function() {
+        tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        document.getElementById('movie-1').innerText = tasks
+      };
+  
+        var saveTasks = function(task, index) {
+          tasks[index] = task;
+          localStorage.setItem("tasks", JSON.stringify(tasks));
+      };
+  
+  loadTasks();
+  
+  var textArea = document.getElementById('input-search');
+  var searchButton = document.getElementById('searchButton');
+  
+  
+  
+  
+  
+  // FOR LOOP
+    // for(var i = 0; i < tasks.length; i++) {
+    //   document.getElementById('movie-' + i).innerText = tasks[i]
+    // }
+    // };
+  // var tasks = []
+
+  // for (let i = 0; i < data.results.length; i++){
+  //   document.getElementById('movie-' + i).innerText = tasks[i]}
+
+  // // goes though an array and creates a div with a class 
+  // var tasksArray = function (tasks) {
+  //   for (let i = 0; i < data.results.length; i++) {
+  //   document.createElement("<div>").addClass("content").text("insert text here."
+  //   )};
+
+
+  // Saves search to local storage under searchFilm
+    // var formSubmitHandler = function (event) {
+    //   event.preventDefault();
+    
+    //   // get value from input element
+    //   var searchMovie = searchInput.value.trim();
+    
+    //   // clear search input and old data
+    //   $("#input-search").val("");
+    //   window.localStorage.removeItem("searchFilm")
+    
+    //   // set localStorage for searchresults html page
+    //   window.localStorage.setItem("searchFilm", JSON.stringify(searchMovie));
+    //   window.location.assign('./assets/html/searchresults.html')
+    // };
