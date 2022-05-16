@@ -19,12 +19,16 @@ Deploy link: https://vertis-z.github.io/entertain-me/
 * Displays recommendations upon page loading
 * Pulls movie info, image and rating from IMDB and displays movie card
 * Search function displays other relevant movies
+* Dropdown bar shows most recent search, stored on local storage
 
 ### Issues
 * 1 day prior to due date, discovered OTT-Details API, and original IMDB scraper were down. 
 * Worked to set up a new IMDB API, to retrieve data and rating at the minimum. 
 * We kept all the code for OTT-Details and original IMDB scraper in the script.js file, but commented out. At the time of due date, those API's were still down. 
-* Favorites page/Local Storage is WIP. Upon failure of the API's, priority was to set up at least one new API so search function and movie cards were operational. 
+
+### Future Developments
+* Favorites page is WIP. Upon failure of the API's, priority was to set up at least one new API so search function and movie cards were operational. Would like to add a feature to save all your favorites on this page with the click of a button, and also the ability to remove them. 
+* Add styling to search bar/dropdown to make it more aesthetic.
 
 ## Screenshot
 
